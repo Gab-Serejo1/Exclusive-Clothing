@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Cadastro De Cliente</ion-title>
+    <ion-title>Novo cliente</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
@@ -18,6 +18,14 @@
       <ion-item>
         <ion-label floating>Email</ion-label>
         <ion-input formControlName="email" type="text"></ion-input> 
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Endereço</ion-label>
+        <ion-input formControlName="endereco" type="text"></ion-input> 
+      </ion-item>
+      <ion-item>
+        <ion-label floating>CEP</ion-label>
+        <ion-input formControlName="cep" type="text"></ion-input> 
       </ion-item>
     </ion-list>
     <ion-button expand="full" (click)="cadastrar()">Cadastrar</ion-button>

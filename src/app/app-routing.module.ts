@@ -5,7 +5,7 @@ import { Auth2Guard } from './service/auth2.guard';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -16,14 +16,46 @@ const routes: Routes = [
     loadChildren: './logoff/logoff.module#LogoffPageModule',
     canActivate: [Auth2Guard] 
   },
-  { path: 'lista-de-clientes', loadChildren: './lista-de-clientes/lista-de-clientes.module#ListaDeClientesPageModule' },
-  { path: 'cadastro-de-cliente', loadChildren: './cadastro-de-cliente/cadastro-de-cliente.module#CadastroDeClientePageModule' },
-  { path: 'cliente-view', loadChildren: './cliente-view/cliente-view.module#ClienteViewPageModule' },  { path: 'lista-de-mensagem', loadChildren: './lista-de-mensagem/lista-de-mensagem.module#ListaDeMensagemPageModule' },
-  { path: 'cadastro-de-mensagem', loadChildren: './cadastro-de-mensagem/cadastro-de-mensagem.module#CadastroDeMensagemPageModule' },
-  { path: 'mensagem-view', loadChildren: './mensagem-view/mensagem-view.module#MensagemViewPageModule' },
-  { path: 'nossas-marcas', loadChildren: './nossas-marcas/nossas-marcas.module#NossasMarcasPageModule' },
-  { path: 'cadastro-marca', loadChildren: './cadastro-marca/cadastro-marca.module#CadastroMarcaPageModule' },
-  { path: 'marca-view', loadChildren: './marca-view/marca-view.module#MarcaViewPageModule' }
+  { 
+    path: 'lista-de-clientes', 
+    loadChildren: './lista-de-clientes/lista-de-clientes.module#ListaDeClientesPageModule'
+  },
+  { 
+    path: 'cadastro-de-cliente', 
+    loadChildren: './cadastro-de-cliente/cadastro-de-cliente.module#CadastroDeClientePageModule' 
+  },
+  { 
+    path: 'cliente-view', 
+  loadChildren: './cliente-view/cliente-view.module#ClienteViewPageModule' 
+  },
+  { 
+    path: 'lista-de-mensagem', 
+    loadChildren: './lista-de-mensagem/lista-de-mensagem.module#ListaDeMensagemPageModule' 
+  },
+  { 
+    path: 'cadastro-de-mensagem', 
+    loadChildren: './cadastro-de-mensagem/cadastro-de-mensagem.module#CadastroDeMensagemPageModule' 
+  },
+  { 
+    path: 'mensagem-view', 
+    loadChildren: './mensagem-view/mensagem-view.module#MensagemViewPageModule' 
+  },
+  { 
+    path: 'nossas-marcas', 
+    loadChildren: './nossas-marcas/nossas-marcas.module#NossasMarcasPageModule' 
+  },
+  { 
+    path: 'cadastro-marca', 
+    loadChildren: './cadastro-marca/cadastro-marca.module#CadastroMarcaPageModule' 
+  },
+  { 
+    path: 'marca-view', 
+  loadChildren: './marca-view/marca-view.module#MarcaViewPageModule' 
+  },
+  { 
+    path: 'login', 
+    loadChildren: './login/login.module#LoginPageModule' 
+  }
 
 
 
