@@ -26,6 +26,7 @@ export class LoginPage implements OnInit {
     this.fire.auth.signInWithEmailAndPassword(this.email.value, this.senha.value)
       .then(() => {
         console.log('Logado com sucesso');
+        this.toast('Logado com sucesso');
         this.router.navigate(['/home']);
       })
       .catch(() => {
@@ -59,4 +60,7 @@ export class LoginPage implements OnInit {
     });
     toast.present();
   }
+
 }
+
+

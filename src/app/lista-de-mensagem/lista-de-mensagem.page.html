@@ -20,4 +20,19 @@
         </ion-card-header>
    
       </ion-card>
+
+
+
+
+<!--      RoupasmodalPage,
+    PopoverpesquisaPage,      --> 
+
+      <ion-item>
+          <ion-input [(ngModel)]="value" clearInput></ion-input>
+        </ion-item>
+      
+  <ion-button block clear small color="secondary" (click)="pushPage()"></ion-button>
+  <ion-button block clear small color="secondary"[routerLink]="['/cadastro-de-mensagem', value]" routerDirection="foward" ></ion-button>
+  <ion-button block clear small color="secondary" (click)="openPopover($event)">Pesquisar</ion-button>
+
 </ion-content>

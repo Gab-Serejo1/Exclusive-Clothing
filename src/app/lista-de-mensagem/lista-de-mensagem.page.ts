@@ -1,8 +1,9 @@
+import { PopoverpesquisaPage } from './../pages/popoverpesquisa/popoverpesquisa.page';
 import { Component, OnInit } from '@angular/core';
 import { Mensagem } from '../model/mensagem';
 import * as firebase from 'firebase';
 import { Router } from '@angular/router';
-import { LoadingController } from '@ionic/angular';
+import { LoadingController, PopoverController } from '@ionic/angular';
 
 @Component({
   selector: 'app-lista-de-mensagem',
@@ -16,7 +17,8 @@ export class ListaDeMensagemPage implements OnInit {
   settings = { timestampsInSnapshots: true };
 
   constructor(public Router: Router,
-    public loadingController: LoadingController) {
+    public loadingController: LoadingController,
+    public popoverController: PopoverController,) {
 
   }
 
@@ -64,5 +66,25 @@ export class ListaDeMensagemPage implements OnInit {
     });
     await loading.present();
   }
+
+
+
+
+
+
+
+  async openPopover(ev: Event){
+    const popover = await this.popoverController.create({
+      component: PopoverpesquisaPage,
+      componentProps: {
+        custom_id: this.value
+      },
+      ev: ev
+    });
+    popover.present()
+  }
+
+
+
 }
 

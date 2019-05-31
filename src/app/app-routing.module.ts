@@ -33,7 +33,7 @@ const routes: Routes = [
     loadChildren: './lista-de-mensagem/lista-de-mensagem.module#ListaDeMensagemPageModule' 
   },
   { 
-    path: 'cadastro-de-mensagem', 
+    path: 'cadastro-de-mensagem/:myid', 
     loadChildren: './cadastro-de-mensagem/cadastro-de-mensagem.module#CadastroDeMensagemPageModule' 
   },
   { 
@@ -55,10 +55,7 @@ const routes: Routes = [
   { 
     path: 'login', 
     loadChildren: './login/login.module#LoginPageModule' 
-  }
-
-
-
+  },
 ];
 
 @NgModule({

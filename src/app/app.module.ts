@@ -1,3 +1,6 @@
+import { PopoverpesquisaPage } from './pages/popoverpesquisa/popoverpesquisa.page';
+import { RoupasmodalPage } from './pages/roupasmodal/roupasmodal.page';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -22,7 +25,8 @@ import {ReactiveFormsModule, FormsModule} from '@angular/forms';
     IonicModule.forRoot(),
     AppRoutingModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+
   ],
   providers: [
     StatusBar,
