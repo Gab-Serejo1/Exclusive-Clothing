@@ -56,6 +56,10 @@ const routes: Routes = [
     path: 'login', 
     loadChildren: './login/login.module#LoginPageModule' 
   },
+  { path: 'quem', 
+  loadChildren: './quem/quem.module#QuemPageModule' },
+
+
 ];
 
 @NgModule({

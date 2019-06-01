@@ -52,6 +52,11 @@ export class AppComponent {
       url: '/cadastro-marca',
       icon: 'md-add-circle'
     },
+    {
+      title: 'Quem Somos',
+      url: '/quem',
+      icon: 'contacts'
+    },
   ];
   //cadastro-de-clientes
 
